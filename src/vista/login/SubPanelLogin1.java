@@ -57,7 +57,7 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
         jPnlRegisterButton.add(jLblTxt);
 
         jLblLink.setText("Registrar usuario");
-        jLblLink.setForeground(UI Manager.getColor("LabelValor2.foreground"));
+        //jLblLink.setForeground(UI Manager.getColor("LabelValor2.foreground"));
         jPnlRegisterButton.add(jLblLink);
 
         jPnlIzuiqerda.add(jPnlRegisterButton);
