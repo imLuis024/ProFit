@@ -19,8 +19,8 @@ public class IndividualButton extends JButton {
         setLayout(new BorderLayout());
         setBorderPainted(false);
         setFocusPainted(false);
-        setContentAreaFilled(true); // ✅ deja que el botón pinte su fondo
-        setOpaque(true);            // ✅ necesario para que Swing respete el background
+        setContentAreaFilled(true); // deja que el botón pinte su fondo
+        setOpaque(true);            // necesario para que Swing respete el background
 
         // Configura el color de fondo según el tema (UIManager)
         setBackground(UIManager.getColor("Button.background"));

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -11,7 +11,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,44,0,0,1,-112"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-113,0,0,4,80"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
@@ -20,11 +20,14 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JPanel" name="jPnlIzuiqerda">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_LayoutCodePre" type="java.lang.String" value="jPnlIzuiqerda.setBorder(new EmptyBorder(8,12,8,12));"/>
+      </AuxValues>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
         <Property name="columns" type="int" value="1"/>
         <Property name="rows" type="int" value="6"/>
-        <Property name="verticalGap" type="int" value="3"/>
+        <Property name="verticalGap" type="int" value="15"/>
       </Layout>
       <SubComponents>
         <Container class="javax.swing.JPanel" name="jPnlTitle">
@@ -49,63 +52,189 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
             <Property name="columns" type="int" value="2"/>
+            <Property name="horizontalGap" type="int" value="8"/>
             <Property name="rows" type="int" value="1"/>
-            <Property name="verticalGap" type="int" value="1"/>
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLblTxt">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="4"/>
+              </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblTxt.setText(&quot;&#xbf;No tienes cuenta?&quot;);"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLblLink">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="2"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLblLinkMouseClicked"/>
+              </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblLink.setText(&quot;Registrar usuario&quot;);&#xa;//jLblLink.setForeground(UI Manager.getColor(&quot;LabelValor2.foreground&quot;));"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblLink.setText(&quot;Registrar usuario&quot;);&#xa;jLblLink.setForeground((Color) UIManager.get(&quot;LabelValor.foreground&quot;));"/>
               </AuxValues>
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPnlName">
+        <Container class="javax.swing.JPanel" name="jPnlFullName">
 
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+            <Property name="columns" type="int" value="2"/>
+            <Property name="horizontalGap" type="int" value="8"/>
+            <Property name="rows" type="int" value="1"/>
           </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPnlNombre">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;&#xa;    @Override&#xa;    protected void paintComponent(Graphics g) {&#xa;        Graphics2D g2 = (Graphics2D) g.create();&#xa;        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);&#xa;&#xa;        // Fondo del tema&#xa;        Color bg = (Color) UIManager.get(&quot;SubPanel.background&quot;);&#xa;        g2.setColor(bg);&#xa;&#xa;        // Fondo redondeado&#xa;        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);&#xa;&#xa;        g2.dispose();&#xa;        super.paintComponent(g);&#xa;    }&#xa;&#xa;}"/>
+                <AuxValue name="JavaCodeGenerator_LayoutCodePre" type="java.lang.String" value="jPnlNombre.setBorder(new com.formdev.flatlaf.ui.FlatRoundBorder());&#xa;jPnlNombre.setOpaque(false);"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="1"/>
+                <Property name="rows" type="int" value="2"/>
+                <Property name="verticalGap" type="int" value="2"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLblNombre">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="horizontalTextPosition" type="int" value="0"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblNombre.setText(&quot;Primer nombre&quot;);"/>
+                  </AuxValues>
+                </Component>
+                <Container class="javax.swing.JPanel" name="jPnlInternoNombre">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_LayoutCodePre" type="java.lang.String" value="jPnlInternoNombre.setOpaque(false);"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                    <Property name="columns" type="int" value="2"/>
+                    <Property name="rows" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextField" name="jTxtFNombre">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTxtFNombre.setOpaque(false);&#xa;jTxtFNombre.setBorder(new EmptyBorder(8,12,8,12));"/>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="18"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLblIconNombre">
+                      <Properties>
+                        <Property name="horizontalTextPosition" type="int" value="4"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPnlApellido">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;&#xa;    @Override&#xa;    protected void paintComponent(Graphics g) {&#xa;        Graphics2D g2 = (Graphics2D) g.create();&#xa;        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);&#xa;&#xa;        // Fondo del tema&#xa;        Color bg = (Color) UIManager.get(&quot;SubPanel.background&quot;);&#xa;        g2.setColor(bg);&#xa;&#xa;        // Fondo redondeado&#xa;        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);&#xa;&#xa;        g2.dispose();&#xa;        super.paintComponent(g);&#xa;    }&#xa;&#xa;}"/>
+                <AuxValue name="JavaCodeGenerator_LayoutCodePre" type="java.lang.String" value="jPnlApellido.setBorder(new com.formdev.flatlaf.ui.FlatRoundBorder());&#xa;jPnlApellido.setOpaque(false);"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="1"/>
+                <Property name="rows" type="int" value="2"/>
+                <Property name="verticalGap" type="int" value="2"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLblApellido">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="horizontalTextPosition" type="int" value="0"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblApellido.setText(&quot;Apellido&quot;);"/>
+                  </AuxValues>
+                </Component>
+                <Container class="javax.swing.JPanel" name="jPnlInternoApellido">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_LayoutCodePre" type="java.lang.String" value="jPnlInternoApellido.setOpaque(false);"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                    <Property name="columns" type="int" value="2"/>
+                    <Property name="rows" type="int" value="1"/>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextField" name="jTxtFApellido">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTxtFApellido.setOpaque(false);&#xa;jTxtFApellido.setBorder(new EmptyBorder(8,12,8,12));"/>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="18"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLblIconApellido">
+                      <Properties>
+                        <Property name="horizontalTextPosition" type="int" value="4"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPnlEmail">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;&#xa;    @Override&#xa;    protected void paintComponent(Graphics g) {&#xa;        Graphics2D g2 = (Graphics2D) g.create();&#xa;        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);&#xa;&#xa;        // Fondo del tema&#xa;        Color bg = (Color) UIManager.get(&quot;SubPanel.background&quot;);&#xa;        g2.setColor(bg);&#xa;&#xa;        // Fondo redondeado&#xa;        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);&#xa;&#xa;        g2.dispose();&#xa;        super.paintComponent(g);&#xa;    }&#xa;&#xa;}"/>
+            <AuxValue name="JavaCodeGenerator_LayoutCodePre" type="java.lang.String" value="jPnlEmail.setBorder(new com.formdev.flatlaf.ui.FlatRoundBorder());&#xa;jPnlEmail.setOpaque(false);"/>
+          </AuxValues>
 
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+            <Property name="columns" type="int" value="1"/>
+            <Property name="rows" type="int" value="2"/>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLblEmail">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblEmail.setText(&quot;Email&quot;);"/>
+              </AuxValues>
+            </Component>
+            <Container class="javax.swing.JPanel" name="jPnlInternoEmail">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_LayoutCodePre" type="java.lang.String" value="jPnlInternoEmail.setOpaque(false);"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
+                <Property name="columns" type="int" value="2"/>
+                <Property name="rows" type="int" value="1"/>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JTextField" name="jTxtFEmail">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jTxtFEmail.setOpaque(false);&#xa;jTxtFEmail.setBorder(new EmptyBorder(8,12,8,12));"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="18"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLblIconEmail">
+                  <Properties>
+                    <Property name="horizontalTextPosition" type="int" value="4"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPnlPassword">
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="552" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="54" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -115,12 +244,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="552" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="54" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -132,12 +261,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="200" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="552" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="399" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>

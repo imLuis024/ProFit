@@ -1,8 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package vista.login;
+
+import java.awt.Color;
+import javax.swing.UIManager;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import javax.swing.border.EmptyBorder;
 
 /**
  *
@@ -32,15 +35,81 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
         jPnlRegisterButton = new javax.swing.JPanel();
         jLblTxt = new javax.swing.JLabel();
         jLblLink = new javax.swing.JLabel();
-        jPnlName = new javax.swing.JPanel();
-        jPnlEmail = new javax.swing.JPanel();
+        jPnlFullName = new javax.swing.JPanel();
+        jPnlNombre = new javax.swing.JPanel(){
+
+            @Override
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+                // Fondo del tema
+                Color bg = (Color) UIManager.get("SubPanel.background");
+                g2.setColor(bg);
+
+                // Fondo redondeado
+                g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
+
+                g2.dispose();
+                super.paintComponent(g);
+            }
+
+        };
+        jLblNombre = new javax.swing.JLabel();
+        jPnlInternoNombre = new javax.swing.JPanel();
+        jLblIconNombre = new javax.swing.JLabel();
+        jPnlApellido = new javax.swing.JPanel(){
+
+            @Override
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+                // Fondo del tema
+                Color bg = (Color) UIManager.get("SubPanel.background");
+                g2.setColor(bg);
+
+                // Fondo redondeado
+                g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
+
+                g2.dispose();
+                super.paintComponent(g);
+            }
+
+        };
+        jLblApellido = new javax.swing.JLabel();
+        jPnlInternoApellido = new javax.swing.JPanel();
+        jLblIconApellido = new javax.swing.JLabel();
+        jPnlEmail = new javax.swing.JPanel(){
+
+            @Override
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+                // Fondo del tema
+                Color bg = (Color) UIManager.get("SubPanel.background");
+                g2.setColor(bg);
+
+                // Fondo redondeado
+                g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
+
+                g2.dispose();
+                super.paintComponent(g);
+            }
+
+        };
+        jLblEmail = new javax.swing.JLabel();
+        jPnlInternoEmail = new javax.swing.JPanel();
+        jLblIconEmail = new javax.swing.JLabel();
         jPnlPassword = new javax.swing.JPanel();
         jPnlLoginButton = new javax.swing.JPanel();
         jPnlDerecha = new javax.swing.JPanel();
 
         setLayout(new java.awt.GridLayout(1, 2));
 
-        jPnlIzuiqerda.setLayout(new java.awt.GridLayout(6, 1, 0, 3));
+        jPnlIzuiqerda.setLayout(new java.awt.GridLayout(6, 1, 0, 15));
+        jPnlIzuiqerda.setBorder(new EmptyBorder(8,12,8,12));
 
         jPnlTitle.setLayout(new java.awt.GridLayout(1, 1));
 
@@ -51,40 +120,94 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
 
         jPnlIzuiqerda.add(jPnlTitle);
 
-        jPnlRegisterButton.setLayout(new java.awt.GridLayout(1, 2, 0, 1));
+        jPnlRegisterButton.setLayout(new java.awt.GridLayout(1, 2, 8, 0));
 
         jLblTxt.setText("¿No tienes cuenta?");
+        jLblTxt.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jPnlRegisterButton.add(jLblTxt);
 
         jLblLink.setText("Registrar usuario");
-        //jLblLink.setForeground(UI Manager.getColor("LabelValor2.foreground"));
+        jLblLink.setForeground((Color) UIManager.get("LabelValor.foreground"));
+        jLblLink.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLblLink.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLblLinkMouseClicked(evt);
+            }
+        });
         jPnlRegisterButton.add(jLblLink);
 
         jPnlIzuiqerda.add(jPnlRegisterButton);
 
-        javax.swing.GroupLayout jPnlNameLayout = new javax.swing.GroupLayout(jPnlName);
-        jPnlName.setLayout(jPnlNameLayout);
-        jPnlNameLayout.setHorizontalGroup(
-            jPnlNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        jPnlNameLayout.setVerticalGroup(
-            jPnlNameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
-        );
+        jPnlFullName.setLayout(new java.awt.GridLayout(1, 2, 8, 0));
 
-        jPnlIzuiqerda.add(jPnlName);
+        jPnlNombre.setLayout(new java.awt.GridLayout(2, 1, 0, 2));
+        jPnlNombre.setBorder(new com.formdev.flatlaf.ui.FlatRoundBorder());
+        jPnlNombre.setOpaque(false);
 
-        javax.swing.GroupLayout jPnlEmailLayout = new javax.swing.GroupLayout(jPnlEmail);
-        jPnlEmail.setLayout(jPnlEmailLayout);
-        jPnlEmailLayout.setHorizontalGroup(
-            jPnlEmailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        jPnlEmailLayout.setVerticalGroup(
-            jPnlEmailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
-        );
+        jLblNombre.setText("Primer nombre");
+        jLblNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLblNombre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPnlNombre.add(jLblNombre);
+
+        jPnlInternoNombre.setLayout(new java.awt.GridLayout(1, 2));
+        jPnlInternoNombre.setOpaque(false);
+
+        jTxtFNombre.setOpaque(false);
+        jTxtFNombre.setBorder(new EmptyBorder(8,12,8,12));
+        jPnlInternoNombre.add(jTxtFNombre);
+
+        jLblIconNombre.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jPnlInternoNombre.add(jLblIconNombre);
+
+        jPnlNombre.add(jPnlInternoNombre);
+
+        jPnlFullName.add(jPnlNombre);
+
+        jPnlApellido.setLayout(new java.awt.GridLayout(2, 1, 0, 2));
+        jPnlApellido.setBorder(new com.formdev.flatlaf.ui.FlatRoundBorder());
+        jPnlApellido.setOpaque(false);
+
+        jLblApellido.setText("Apellido");
+        jLblApellido.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLblApellido.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPnlApellido.add(jLblApellido);
+
+        jPnlInternoApellido.setLayout(new java.awt.GridLayout(1, 2));
+        jPnlInternoApellido.setOpaque(false);
+
+        jTxtFApellido.setOpaque(false);
+        jTxtFApellido.setBorder(new EmptyBorder(8,12,8,12));
+        jPnlInternoApellido.add(jTxtFApellido);
+
+        jLblIconApellido.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jPnlInternoApellido.add(jLblIconApellido);
+
+        jPnlApellido.add(jPnlInternoApellido);
+
+        jPnlFullName.add(jPnlApellido);
+
+        jPnlIzuiqerda.add(jPnlFullName);
+
+        jPnlEmail.setLayout(new java.awt.GridLayout(2, 1));
+        jPnlEmail.setBorder(new com.formdev.flatlaf.ui.FlatRoundBorder());
+        jPnlEmail.setOpaque(false);
+
+        jLblEmail.setText("Email");
+        jLblEmail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLblEmail.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPnlEmail.add(jLblEmail);
+
+        jPnlInternoEmail.setLayout(new java.awt.GridLayout(1, 2));
+        jPnlInternoEmail.setOpaque(false);
+
+        jTxtFEmail.setOpaque(false);
+        jTxtFEmail.setBorder(new EmptyBorder(8,12,8,12));
+        jPnlInternoEmail.add(jTxtFEmail);
+
+        jLblIconEmail.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jPnlInternoEmail.add(jLblIconEmail);
+
+        jPnlEmail.add(jPnlInternoEmail);
 
         jPnlIzuiqerda.add(jPnlEmail);
 
@@ -92,11 +215,11 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
         jPnlPassword.setLayout(jPnlPasswordLayout);
         jPnlPasswordLayout.setHorizontalGroup(
             jPnlPasswordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+            .addGap(0, 552, Short.MAX_VALUE)
         );
         jPnlPasswordLayout.setVerticalGroup(
             jPnlPasswordLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
+            .addGap(0, 54, Short.MAX_VALUE)
         );
 
         jPnlIzuiqerda.add(jPnlPassword);
@@ -105,11 +228,11 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
         jPnlLoginButton.setLayout(jPnlLoginButtonLayout);
         jPnlLoginButtonLayout.setHorizontalGroup(
             jPnlLoginButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+            .addGap(0, 552, Short.MAX_VALUE)
         );
         jPnlLoginButtonLayout.setVerticalGroup(
             jPnlLoginButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 47, Short.MAX_VALUE)
+            .addGap(0, 54, Short.MAX_VALUE)
         );
 
         jPnlIzuiqerda.add(jPnlLoginButton);
@@ -120,28 +243,49 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
         jPnlDerecha.setLayout(jPnlDerechaLayout);
         jPnlDerechaLayout.setHorizontalGroup(
             jPnlDerechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+            .addGap(0, 552, Short.MAX_VALUE)
         );
         jPnlDerechaLayout.setVerticalGroup(
             jPnlDerechaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 399, Short.MAX_VALUE)
         );
 
         add(jPnlDerecha);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jLblLinkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLblLinkMouseClicked
+        // Revaldar y repintar el JFrame al hacer clic:
+        app.Main.frame.setContentPane(new vista.register.Register());
+        app.Main.frame.revalidate();
+        app.Main.frame.repaint();
+    }//GEN-LAST:event_jLblLinkMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLblApellido;
+    private javax.swing.JLabel jLblEmail;
+    private javax.swing.JLabel jLblIconApellido;
+    private javax.swing.JLabel jLblIconEmail;
+    private javax.swing.JLabel jLblIconNombre;
     private javax.swing.JLabel jLblLink;
+    private javax.swing.JLabel jLblNombre;
     private javax.swing.JLabel jLblTittle;
     private javax.swing.JLabel jLblTxt;
+    private javax.swing.JPanel jPnlApellido;
     private javax.swing.JPanel jPnlDerecha;
     private javax.swing.JPanel jPnlEmail;
+    private javax.swing.JPanel jPnlFullName;
+    private javax.swing.JPanel jPnlInternoApellido;
+    private javax.swing.JPanel jPnlInternoEmail;
+    private javax.swing.JPanel jPnlInternoNombre;
     private javax.swing.JPanel jPnlIzuiqerda;
     private javax.swing.JPanel jPnlLoginButton;
-    private javax.swing.JPanel jPnlName;
+    private javax.swing.JPanel jPnlNombre;
     private javax.swing.JPanel jPnlPassword;
     private javax.swing.JPanel jPnlRegisterButton;
     private javax.swing.JPanel jPnlTitle;
+    private final javax.swing.JTextField jTxtFApellido = new javax.swing.JTextField();
+    private final javax.swing.JTextField jTxtFEmail = new javax.swing.JTextField();
+    private final javax.swing.JTextField jTxtFNombre = new javax.swing.JTextField();
     // End of variables declaration//GEN-END:variables
 }
