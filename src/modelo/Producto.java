@@ -1,14 +1,11 @@
 package modelo;
+
 /*
  * Clase Producto
- *Responsabilidad: representar los productos que se venderán.
- * ---------------
- * Define los campos del producto, incluyendo su categoría, precio y stock.
- * Permite modelar los datos que maneja la tabla 'productos'.
- *
- * Es fundamental para:
- * - Mostrar productos en la vista.
- * - Enviar datos desde formularios al DAO.
+ * Responsabilidad:
+ *  - Representar los productos que se venderán en el sistema.
+ *  - Mapear los campos de la tabla 'productos'.
+ *  - Incluir el nombre de la categoría (JOIN) para mostrarlo en tablas.
  */
 
 public class Producto {
@@ -20,7 +17,11 @@ public class Producto {
     private double precio;
     private int stock;
 
+    // Campo adicional para mostrar el nombre de la categoría
+    private String nombreCategoria;
+
     // Getters y Setters
+
     public int getIdProducto() {
         return idProducto;
     }
@@ -67,5 +68,14 @@ public class Producto {
 
     public void setStock(int stock) {
         this.stock = stock;
+    }
+
+    // NUEVO: Nombre de la categoría (para mostrar en tablas)
+    public String getNombreCategoria() {
+        return nombreCategoria;
+    }
+
+    public void setNombreCategoria(String nombreCategoria) {
+        this.nombreCategoria = nombreCategoria;
     }
 }

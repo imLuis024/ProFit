@@ -51,6 +51,8 @@ public class SubPanelCategorias1 extends javax.swing.JPanel{
 
         jPnlMain.add(jPnlTitle);
 
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
         jTableCategorias.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {},
             new String [] { "ID", "Nombre", "Descripción" }

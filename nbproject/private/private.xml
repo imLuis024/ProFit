@@ -7,10 +7,12 @@
             <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/login/Login.java</file>
             <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/dashboard/Dashboard.java</file>
             <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/dashboard/SubPanelDashboard1.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/categorias/SubPanelCategorias1.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/categorias/FormCategoria.java</file>
             <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/controlador/CategoriaControlador.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/modelo/CategoriaDAO.java</file>
+            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/controlador/ProductoControlador.java</file>
+            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/categorias/SubPanelCategorias1.java</file>
+            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/productos/SubPanelProductos1.java</file>
+            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/categorias/FormCategoria.java</file>
+            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/productos/FormProducto.java</file>
         </group>
     </open-files>
 </project-private>

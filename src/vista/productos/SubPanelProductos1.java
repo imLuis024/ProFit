@@ -1,8 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package vista.productos;
+
+import controlador.ProductoControlador;
+import vista.categorias.*;
+import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import modelo.Producto;
 
 /**
  *
@@ -11,10 +14,11 @@ package vista.productos;
 public class SubPanelProductos1 extends javax.swing.JPanel {
 
     /**
-     * Creates new form SubPanelProductos1
+     * Creates new form SubPanelCategorias1
      */
     public SubPanelProductos1() {
         initComponents();
+        cargarProductos();
     }
 
     /**
@@ -26,19 +30,132 @@ public class SubPanelProductos1 extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jPnlMain = new javax.swing.JPanel();
+        jPnlTitle = new javax.swing.JPanel();
+        jLblTitle = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableProductos = new javax.swing.JTable();
+        jPnlButtons = new javax.swing.JPanel();
+        jBtnAgregar = new javax.swing.JButton();
+        jBtnEditar = new javax.swing.JButton();
+        jBtnEliminar = new javax.swing.JButton();
+        jBtnActualizar = new javax.swing.JButton();
+
+        setLayout(new java.awt.GridLayout(1, 1));
+
+        jPnlMain.setLayout(new javax.swing.BoxLayout(jPnlMain, javax.swing.BoxLayout.PAGE_AXIS));
+
+        jPnlTitle.setLayout(new java.awt.GridLayout(1, 1));
+        jPnlTitle.setBorder(BorderFactory.createEmptyBorder(8, 0, 8, 0));
+
+        jLblTitle.setText("Dashboard Productos");
+        jLblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPnlTitle.add(jLblTitle);
+
+        jPnlMain.add(jPnlTitle);
+
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+        jTableProductos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {},
+            new String[]{"ID", "Producto", "Categoría", "Precio", "Stock", "Descripción"}
+        ));
+        jScrollPane1.setViewportView(jTableProductos);
+
+        jPnlMain.add(jScrollPane1);
+
+        jPnlButtons.setLayout(new java.awt.GridLayout(1, 4, 8, 0));
+        jPnlButtons.setBorder(BorderFactory.createEmptyBorder(8, 0, 8, 0));
+
+        jBtnAgregar.setText("Agregar");
+
+        jBtnAgregar.addActionListener(e -> {
+            new vista.productos.FormProducto(null, true, this).setVisible(true);
+        });
+        jPnlButtons.add(jBtnAgregar);
+
+        jBtnEditar.setText("Editar");
+
+        jBtnEditar.addActionListener(e -> {
+            int fila = jTableProductos.getSelectedRow();
+            if (fila == -1) {
+                JOptionPane.showMessageDialog(this, "Seleccione un producto");
+                return;
+            }
+
+            int id = (int) jTableProductos.getValueAt(fila, 0);
+
+            ProductoControlador ctrl = new ProductoControlador();
+            Producto p = ctrl.obtener(id);
+
+            new FormProducto(p, true, this).setVisible(true);
+
+            new vista.productos.FormProducto(p, true, this).setVisible(true);
+        });
+        jPnlButtons.add(jBtnEditar);
+
+        jBtnEliminar.setText("Eliminar");
+
+        jBtnEliminar.addActionListener(e -> {
+            int fila = jTableProductos.getSelectedRow();
+            if (fila == -1) {
+                JOptionPane.showMessageDialog(this, "Seleccione un producto");
+                return;
+            }
+
+            int id = (int) jTableProductos.getValueAt(fila, 0);
+
+            int confirm = JOptionPane.showConfirmDialog(this,
+                "¿Eliminar producto?", "Confirmar",
+                JOptionPane.YES_NO_OPTION);
+
+            if (confirm == JOptionPane.YES_OPTION) {
+                ProductoControlador ctrl = new ProductoControlador();
+                if (ctrl.eliminar(id)) {
+                    cargarProductos();
+                }
+            }
+        });
+        jPnlButtons.add(jBtnEliminar);
+
+        jBtnActualizar.setText("Actualizar");
+
+        jBtnActualizar.addActionListener(e -> cargarProductos());
+        jPnlButtons.add(jBtnActualizar);
+
+        jPnlMain.add(jPnlButtons);
+
+        add(jPnlMain);
     }// </editor-fold>//GEN-END:initComponents
 
+    public void cargarProductos() {
+        DefaultTableModel modelo = (DefaultTableModel) jTableProductos.getModel();
+        modelo.setRowCount(0);
+
+        ProductoControlador ctrl = new ProductoControlador();
+
+        for (Producto p : ctrl.listar()) {
+            modelo.addRow(new Object[]{
+                p.getIdProducto(),
+                p.getNombreProducto(),
+                p.getNombreCategoria(),
+                p.getPrecio(),
+                p.getStock(),
+                p.getDescripcion()
+            });
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnActualizar;
+    private javax.swing.JButton jBtnAgregar;
+    private javax.swing.JButton jBtnEditar;
+    private javax.swing.JButton jBtnEliminar;
+    private javax.swing.JLabel jLblTitle;
+    private javax.swing.JPanel jPnlButtons;
+    private javax.swing.JPanel jPnlMain;
+    private javax.swing.JPanel jPnlTitle;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableProductos;
     // End of variables declaration//GEN-END:variables
 }
