@@ -21,6 +21,7 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             frame = new JFrame("ProFit - Sistema de Suplementos");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setResizable(false);
             frame.setSize(1000, 500);
             frame.setLocationRelativeTo(null);
             frame.setContentPane(new Login());
