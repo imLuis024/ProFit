@@ -1,4 +1,5 @@
 package controlador;
+
 /*
  * Clase CategoriaControlador
  *Responsabilidad: coordinar las operaciones sobre las categorías.
@@ -12,11 +13,22 @@ import modelo.CategoriaDAO;
 import java.util.List;
 
 public class CategoriaControlador {
+
     private final CategoriaDAO dao = new CategoriaDAO();
 
-    public List<Categoria> listar() { return dao.listar(); }
+    public List<Categoria> listar() {
+        return dao.listar();
+    }
 
-    public boolean agregar(Categoria c) { return dao.agregar(c); }
+    public boolean agregar(Categoria c) {
+        return dao.agregar(c);
+    }
 
-    public boolean eliminar(int id) { return dao.eliminar(id); }
+    public boolean eliminar(int id) {
+        return dao.eliminar(id);
+    }
+
+    public boolean actualizar(Categoria c) {
+        return dao.actualizar(c);
+    }
 }
