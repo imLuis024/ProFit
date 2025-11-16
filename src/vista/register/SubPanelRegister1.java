@@ -434,8 +434,9 @@ public class SubPanelRegister1 extends javax.swing.JPanel {
 
         if (controlador.agregar(u)) {
             JOptionPane.showMessageDialog(this, "Registro exitoso");
-           // new Login().setVisible(true);
-            //this.dispose();
+            app.Main.frame.setContentPane(new vista.login.Login());
+            app.Main.frame.revalidate();
+            app.Main.frame.repaint();
         } else {
             JOptionPane.showMessageDialog(this, "Error al registrar usuario");
         }

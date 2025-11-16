@@ -11,6 +11,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.border.EmptyBorder;
+import vista.Dashboard;
 
 /**
  *
@@ -253,8 +254,9 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
         UsuarioControlador controlador = new UsuarioControlador();
 
         if (controlador.login(email, pass)) {
-            new Dashboard().setVisible(true);
-            this.dispose();
+            app.Main.frame.setContentPane(new vista.Dashboard());
+            app.Main.frame.revalidate();
+            app.Main.frame.repaint();
         } else {
             JOptionPane.showMessageDialog(this, "Email o contraseña incorrectos");
         }
