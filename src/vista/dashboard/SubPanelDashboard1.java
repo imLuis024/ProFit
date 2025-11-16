@@ -111,13 +111,13 @@ public class SubPanelDashboard1 extends javax.swing.JPanel {
 
     private void jBtnGestionCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnGestionCategoriasActionPerformed
         // TODO add your handling code here:
-        //        app.Main.frame.setContentPane(new vista.categorias.Categorias());
-//        app.Main.frame.revalidate();
-//        app.Main.frame.repaint();
+        app.Main.frame.setContentPane(new vista.categorias.Categorias());
+        app.Main.frame.revalidate();
+        app.Main.frame.repaint();
 
-        vista.dashboard.Dashboard.frame.setContentPane(new vista.categorias.Categorias());
-        vista.dashboard.Dashboard.frame.revalidate();
-        vista.dashboard.Dashboard.frame.repaint();
+//        vista.dashboard.Dashboard.frame.setContentPane(new vista.categorias.Categorias());
+//        vista.dashboard.Dashboard.frame.revalidate();
+//        vista.dashboard.Dashboard.frame.repaint();
     }//GEN-LAST:event_jBtnGestionCategoriasActionPerformed
 
 

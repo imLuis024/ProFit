@@ -8,7 +8,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Luis Angel Hernandez
  */
-public class SubPanelCategorias1 extends javax.swing.JPanel{
+public class SubPanelCategorias1 extends javax.swing.JPanel {
 
     /**
      * Creates new form SubPanelCategorias1
@@ -37,6 +37,7 @@ public class SubPanelCategorias1 extends javax.swing.JPanel{
         jBtnEditar = new javax.swing.JButton();
         jBtnEliminar = new javax.swing.JButton();
         jBtnActualizar = new javax.swing.JButton();
+        jBtnRegresar = new javax.swing.JButton();
 
         setLayout(new java.awt.GridLayout(1, 1));
 
@@ -61,7 +62,7 @@ public class SubPanelCategorias1 extends javax.swing.JPanel{
 
         jPnlMain.add(jScrollPane1);
 
-        jPnlButtons.setLayout(new java.awt.GridLayout(1, 4, 8, 0));
+        jPnlButtons.setLayout(new java.awt.GridLayout(1, 5, 8, 0));
         jPnlButtons.setBorder(BorderFactory.createEmptyBorder(8, 0, 8, 0));
 
         jBtnAgregar.setText("Agregar");
@@ -121,10 +122,27 @@ public class SubPanelCategorias1 extends javax.swing.JPanel{
         jBtnActualizar.addActionListener(e -> cargarCategorias());
         jPnlButtons.add(jBtnActualizar);
 
+        jBtnRegresar.setText("Regresar");
+
+        jBtnActualizar.addActionListener(e -> cargarCategorias());
+        jBtnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnRegresarActionPerformed(evt);
+            }
+        });
+        jPnlButtons.add(jBtnRegresar);
+
         jPnlMain.add(jPnlButtons);
 
         add(jPnlMain);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegresarActionPerformed
+        // TODO add your handling code here:
+        app.Main.frame.setContentPane(new vista.dashboard.Dashboard());
+        app.Main.frame.revalidate();
+        app.Main.frame.repaint();
+    }//GEN-LAST:event_jBtnRegresarActionPerformed
 
     public void cargarCategorias() {
         DefaultTableModel modelo = (DefaultTableModel) jTableCategorias.getModel();
@@ -146,6 +164,7 @@ public class SubPanelCategorias1 extends javax.swing.JPanel{
     private javax.swing.JButton jBtnAgregar;
     private javax.swing.JButton jBtnEditar;
     private javax.swing.JButton jBtnEliminar;
+    private javax.swing.JButton jBtnRegresar;
     private javax.swing.JLabel jLblTitle;
     private javax.swing.JPanel jPnlButtons;
     private javax.swing.JPanel jPnlMain;

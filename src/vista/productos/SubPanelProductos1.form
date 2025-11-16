@@ -97,7 +97,7 @@
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-            <Property name="columns" type="int" value="4"/>
+            <Property name="columns" type="int" value="5"/>
             <Property name="horizontalGap" type="int" value="8"/>
             <Property name="rows" type="int" value="1"/>
           </Layout>
@@ -118,6 +118,14 @@
               </AuxValues>
             </Component>
             <Component class="javax.swing.JButton" name="jBtnActualizar">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jBtnActualizar.setText(&quot;Actualizar&quot;);&#xa;&#xa;jBtnActualizar.addActionListener(e -&gt; cargarProductos());"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="jBtnRegresar">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnRegresarActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jBtnActualizar.setText(&quot;Actualizar&quot;);&#xa;&#xa;jBtnActualizar.addActionListener(e -&gt; cargarProductos());"/>
               </AuxValues>
