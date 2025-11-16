@@ -45,6 +45,7 @@
             <Component class="javax.swing.JLabel" name="jLblTittle">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="jLblTittle.putClientProperty(&quot;FlatLaf.styleClass&quot;, &quot;h1&quot;);"/>

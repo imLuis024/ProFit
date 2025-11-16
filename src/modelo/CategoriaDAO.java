@@ -45,4 +45,21 @@ public class CategoriaDAO {
             return false;
         }
     }
+
+    public boolean actualizar(Categoria c) {
+        String sql = "UPDATE categorias SET nombre_categoria = ?, descripcion = ? WHERE id_categoria = ?";
+
+        try (Connection con = Conexion.getConexion(); PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setString(1, c.getNombreCategoria());
+            ps.setString(2, c.getDescripcion());
+            ps.setInt(3, c.getIdCategoria());
+
+            return ps.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

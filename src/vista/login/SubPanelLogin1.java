@@ -11,7 +11,7 @@ import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.border.EmptyBorder;
-import vista.Dashboard;
+import vista.dashboard.Dashboard;
 
 /**
  *
@@ -102,6 +102,7 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
 
         jLblTittle.setText("Iniciar Sesión");
         jLblTittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLblTittle.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLblTittle.putClientProperty("FlatLaf.styleClass", "h1");
         jPnlTitle.add(jLblTittle);
 
@@ -254,7 +255,7 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
         UsuarioControlador controlador = new UsuarioControlador();
 
         if (controlador.login(email, pass)) {
-            app.Main.frame.setContentPane(new vista.Dashboard());
+            app.Main.frame.setContentPane(new vista.dashboard.Dashboard());
             app.Main.frame.revalidate();
             app.Main.frame.repaint();
         } else {

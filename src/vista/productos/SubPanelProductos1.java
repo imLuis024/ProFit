@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package vista;
+package vista.productos;
 
 /**
  *
- * @author luish
+ * @author Luis Angel Hernandez
  */
-public class Dashboard extends javax.swing.JPanel {
+public class SubPanelProductos1 extends javax.swing.JPanel {
 
     /**
-     * Creates new form Dashboard
+     * Creates new form SubPanelProductos1
      */
-    public Dashboard() {
+    public SubPanelProductos1() {
         initComponents();
     }
 

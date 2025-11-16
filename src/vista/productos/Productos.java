@@ -15,6 +15,20 @@ public class Productos extends javax.swing.JFrame {
      */
     public Productos() {
         initComponents();
+        inicializarSubpaneles();
+    }
+
+    private void inicializarSubpaneles() {
+        removeAll();
+
+        // ===================== SubPanelLogin1 =====================
+        SubPanelProductos1 = new vista.productos.SubPanelProductos1(); // 
+        setLayout(new java.awt.BorderLayout());
+        add(SubPanelProductos1, java.awt.BorderLayout.CENTER);
+
+        // Refrescar layout
+        revalidate();
+        repaint();
     }
 
     /**
@@ -26,23 +40,23 @@ public class Productos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPnlMain = new javax.swing.JPanel();
+        SubPanelProductos1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(1, 1));
 
-        javax.swing.GroupLayout jPnlMainLayout = new javax.swing.GroupLayout(jPnlMain);
-        jPnlMain.setLayout(jPnlMainLayout);
-        jPnlMainLayout.setHorizontalGroup(
-            jPnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout SubPanelProductos1Layout = new javax.swing.GroupLayout(SubPanelProductos1);
+        SubPanelProductos1.setLayout(SubPanelProductos1Layout);
+        SubPanelProductos1Layout.setHorizontalGroup(
+            SubPanelProductos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 400, Short.MAX_VALUE)
         );
-        jPnlMainLayout.setVerticalGroup(
-            jPnlMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        SubPanelProductos1Layout.setVerticalGroup(
+            SubPanelProductos1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPnlMain);
+        getContentPane().add(SubPanelProductos1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -84,6 +98,6 @@ public class Productos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPnlMain;
+    private javax.swing.JPanel SubPanelProductos1;
     // End of variables declaration//GEN-END:variables
 }

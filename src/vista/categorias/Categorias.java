@@ -1,20 +1,34 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package vista.categorias;
 
 /**
  *
- * @author luish
+ * @author Luis Angel Hernandez
  */
-public class Categorias extends javax.swing.JFrame {
+public class Categorias extends javax.swing.JPanel {
 
     /**
-     * Creates new form CategoriasVista
+     * Creates new form asd
      */
     public Categorias() {
         initComponents();
+        inicializarSubpaneles();
+    }
+
+    private void inicializarSubpaneles() {
+        removeAll();
+
+        // ===================== SubPanelLogin1 =====================
+        SubPanelCategorias1 = new vista.categorias.SubPanelCategorias1(); // 
+        setLayout(new java.awt.BorderLayout());
+        add(SubPanelCategorias1, java.awt.BorderLayout.CENTER);
+
+        // Refrescar layout
+        revalidate();
+        repaint();
     }
 
     /**
@@ -26,58 +40,26 @@ public class Categorias extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        SubPanelCategorias1 = new javax.swing.JPanel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        setLayout(new java.awt.GridLayout(1, 1));
+
+        javax.swing.GroupLayout SubPanelCategorias1Layout = new javax.swing.GroupLayout(SubPanelCategorias1);
+        SubPanelCategorias1.setLayout(SubPanelCategorias1Layout);
+        SubPanelCategorias1Layout.setHorizontalGroup(
+            SubPanelCategorias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 400, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        SubPanelCategorias1Layout.setVerticalGroup(
+            SubPanelCategorias1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
-        pack();
+        add(SubPanelCategorias1);
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Categorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Categorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Categorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Categorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Categorias().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel SubPanelCategorias1;
     // End of variables declaration//GEN-END:variables
 }
