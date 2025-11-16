@@ -354,6 +354,9 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JButton" name="jBtnCrearCuenta">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnCrearCuentaActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new recursos.ui.IndividualButton(&quot;Crear cuenta&quot;)&#xa;"/>
                 <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jBtnCrearCuenta.putClientProperty(&quot;JComponent.roundRect&quot;, true);             // activa redondeo FlatLaf&#xa;jBtnCrearCuenta.putClientProperty(&quot;JComponent.style&quot;, &quot;arc: 20; borderWidth: 1;&quot;); // radio 20px, grosor 1px"/>

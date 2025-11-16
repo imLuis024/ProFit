@@ -1,6 +1,6 @@
-
 package vista.login;
 
+import controlador.UsuarioControlador;
 import java.awt.Color;
 import javax.swing.UIManager;
 import java.awt.Graphics;
@@ -9,13 +9,13 @@ import java.awt.Image;
 import java.awt.RenderingHints;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.border.EmptyBorder;
 
 /**
  *
  * @author luish
  */
-
 public class SubPanelLogin1 extends javax.swing.JPanel {
 
     /**
@@ -108,11 +108,11 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
 
         jPnlRegisterButton.setLayout(new java.awt.GridLayout(1, 2, 8, 0));
 
-        jLblTxt.setText("¿Ya tienes cuenta?");
+        jLblTxt.setText("¿No tienes cuenta?");
         jLblTxt.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jPnlRegisterButton.add(jLblTxt);
 
-        jLblLink.setText("Iniciar sesión");
+        jLblLink.setText("Registrar Cuenta");
         jLblLink.setForeground((Color) UIManager.get("LabelValor.foreground"));
         jLblLink.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLblLink.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -192,6 +192,11 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
 
         jBtnCrearCuenta.putClientProperty("JComponent.roundRect", true);             // activa redondeo FlatLaf
         jBtnCrearCuenta.putClientProperty("JComponent.style", "arc: 20; borderWidth: 1;"); // radio 20px, grosor 1px
+        jBtnCrearCuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCrearCuentaActionPerformed(evt);
+            }
+        });
         jPnlLoginButton1.add(jBtnCrearCuenta);
 
         jPnlIzuiqerda.add(jPnlLoginButton1);
@@ -236,9 +241,24 @@ public class SubPanelLogin1 extends javax.swing.JPanel {
             jPasswordField.setEchoChar(passwordEchoOriginal);
             passwordMostrando = false;
         }
-    
+
 
     }//GEN-LAST:event_jLblIconPasswordMousePressed
+
+    private void jBtnCrearCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCrearCuentaActionPerformed
+        // TODO add your handling code here:
+        String email = jTxtFEmail.getText();
+        String pass = new String(jPasswordField.getPassword());
+
+        UsuarioControlador controlador = new UsuarioControlador();
+
+        if (controlador.login(email, pass)) {
+            new Dashboard().setVisible(true);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Email o contraseña incorrectos");
+        }
+    }//GEN-LAST:event_jBtnCrearCuentaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

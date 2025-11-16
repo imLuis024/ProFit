@@ -66,7 +66,7 @@
                 <Property name="horizontalAlignment" type="int" value="4"/>
               </Properties>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblTxt.setText(&quot;&#xbf;Ya tienes cuenta?&quot;);"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblTxt.setText(&quot;&#xbf;No tienes cuenta?&quot;);"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JLabel" name="jLblLink">
@@ -77,7 +77,7 @@
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLblLinkMouseClicked"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblLink.setText(&quot;Iniciar sesi&#xf3;n&quot;);&#xa;jLblLink.setForeground((Color) UIManager.get(&quot;LabelValor.foreground&quot;));"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jLblLink.setText(&quot;Registrar Cuenta&quot;);&#xa;jLblLink.setForeground((Color) UIManager.get(&quot;LabelValor.foreground&quot;));"/>
               </AuxValues>
             </Component>
           </SubComponents>
@@ -195,6 +195,9 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JButton" name="jBtnCrearCuenta">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnCrearCuentaActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new recursos.ui.IndividualButton(&quot;Iniciar Sesi&#xf3;n&quot;)&#xa;"/>
                 <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jBtnCrearCuenta.putClientProperty(&quot;JComponent.roundRect&quot;, true);             // activa redondeo FlatLaf&#xa;jBtnCrearCuenta.putClientProperty(&quot;JComponent.style&quot;, &quot;arc: 20; borderWidth: 1;&quot;); // radio 20px, grosor 1px"/>

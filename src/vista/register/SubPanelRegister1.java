@@ -1,5 +1,6 @@
 package vista.register;
 
+import controlador.UsuarioControlador;
 import java.awt.Color;
 import javax.swing.UIManager;
 import java.awt.Graphics;
@@ -8,7 +9,11 @@ import java.awt.Image;
 import java.awt.RenderingHints;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
+import modelo.Usuario;
+import vista.login.Login;
 
 /**
  *
@@ -21,6 +26,15 @@ public class SubPanelRegister1 extends javax.swing.JPanel {
      */
     public SubPanelRegister1() {
         initComponents();
+        SwingUtilities.invokeLater(() -> {
+            System.out.println("Ancho jPnlDerecha: " + jPnlDerecha.getWidth());
+            System.out.println("Alto jPnlDerecha: " + jPnlDerecha.getHeight());
+        });
+
+        SwingUtilities.invokeLater(() -> {
+            System.out.println("Ancho jPnlDerecha: " + jPnlIzuiqerda.getWidth());
+            System.out.println("Alto jPnlDerecha: " + jPnlIzuiqerda.getHeight());
+        });
     }
 
     @SuppressWarnings("unchecked")
@@ -355,6 +369,11 @@ public class SubPanelRegister1 extends javax.swing.JPanel {
 
         jBtnCrearCuenta.putClientProperty("JComponent.roundRect", true);             // activa redondeo FlatLaf
         jBtnCrearCuenta.putClientProperty("JComponent.style", "arc: 20; borderWidth: 1;"); // radio 20px, grosor 1px
+        jBtnCrearCuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCrearCuentaActionPerformed(evt);
+            }
+        });
         jPnlLoginButton1.add(jBtnCrearCuenta);
 
         jPnlIzuiqerda.add(jPnlLoginButton1);
@@ -371,9 +390,11 @@ public class SubPanelRegister1 extends javax.swing.JPanel {
 
         add(jPnlDerecha);
     }// </editor-fold>//GEN-END:initComponents
- private boolean passwordMostrando = false;
+    private boolean passwordMostrando = false;
     private char passwordEchoOriginal;
     private boolean echoGuardado = false;
+
+
     private void jLblLinkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLblLinkMouseClicked
         // Revaldar y repintar el JFrame al hacer clic:
         app.Main.frame.setContentPane(new vista.login.Login());
@@ -399,6 +420,26 @@ public class SubPanelRegister1 extends javax.swing.JPanel {
             passwordMostrando = false;
         }
     }//GEN-LAST:event_jLblIconPasswordMousePressed
+
+    private void jBtnCrearCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCrearCuentaActionPerformed
+        // TODO add your handling code here:
+        Usuario u = new Usuario();
+        u.setNombre(jTxtFNombre.getText());
+        u.setApellido(jTxtFApellido.getText());
+        u.setEmail(jTxtFEmail.getText());
+        u.setContraseña(new String(jPasswordField.getPassword()));
+        u.setTelefono(jFormattedTxFPhone.getText());
+
+        UsuarioControlador controlador = new UsuarioControlador();
+
+        if (controlador.agregar(u)) {
+            JOptionPane.showMessageDialog(this, "Registro exitoso");
+           // new Login().setVisible(true);
+            //this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al registrar usuario");
+        }
+    }//GEN-LAST:event_jBtnCrearCuentaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

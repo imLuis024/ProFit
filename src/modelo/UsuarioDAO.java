@@ -1,4 +1,5 @@
 package modelo;
+
 /*
  * Clase UsuarioDAO
  *Responsabilidad: ejecutar las operaciones CRUD (Create, Read, Update, Delete).
@@ -21,7 +22,6 @@ package modelo;
 🔹 Los DAO son los encargados de hablar con MySQL.
 🔹 Devuelven objetos (Usuario, Categoria, Producto) listos para ser mostrados o usados por los controladores.
  */
-
 
 import java.sql.*;
 import java.util.*;
@@ -74,4 +74,30 @@ public class UsuarioDAO {
             return false;
         }
     }
+
+    public Usuario obtenerPorEmail(String email) {
+        Usuario u = null;
+        String sql = "SELECT * FROM usuarios WHERE email = ?";
+
+        try (Connection con = Conexion.getConexion(); PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                u = new Usuario();
+                u.setIdUsuario(rs.getInt("id_usuario"));
+                u.setNombre(rs.getString("nombre"));
+                u.setApellido(rs.getString("apellido"));
+                u.setEmail(rs.getString("email"));
+                u.setContraseña(rs.getString("contraseña"));
+                u.setTelefono(rs.getString("telefono"));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return u;
+    }
+
 }

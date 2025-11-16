@@ -1,4 +1,5 @@
 package controlador;
+
 /*
  * Clase UsuarioControlador
  *Responsabilidad: manejar la lógica de negocio de los usuarios.
@@ -21,11 +22,28 @@ import modelo.UsuarioDAO;
 import java.util.List;
 
 public class UsuarioControlador {
+
     private final UsuarioDAO dao = new UsuarioDAO();
 
-    public List<Usuario> listar() { return dao.listar(); }
+    public List<Usuario> listar() {
+        return dao.listar();
+    }
 
-    public boolean agregar(Usuario u) { return dao.agregar(u); }
+    public boolean agregar(Usuario u) {
+        return dao.agregar(u);
+    }
 
-    public boolean eliminar(int id) { return dao.eliminar(id); }
+    public boolean eliminar(int id) {
+        return dao.eliminar(id);
+    }
+
+    public boolean login(String email, String password) {
+        Usuario u = dao.obtenerPorEmail(email);
+
+        if (u != null && u.getContraseña().equals(password)) {
+            return true;
+        }
+        return false;
+    }
+
 }
