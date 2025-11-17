@@ -3,16 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/login/SubPanelLogin1.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/login/Login.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/dashboard/Dashboard.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/dashboard/SubPanelDashboard1.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/controlador/CategoriaControlador.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/controlador/ProductoControlador.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/categorias/SubPanelCategorias1.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/productos/SubPanelProductos1.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/categorias/FormCategoria.java</file>
-            <file>file:/C:/Users/Luis%20Angel%20Hernandez/Documents/NetBeansProjects/ProFit/src/vista/productos/FormProducto.java</file>
+            <file>file:/C:/Users/luish/Documents/ProFit/src/vista/productos/Productos.java</file>
+            <file>file:/C:/Users/luish/Documents/ProFit/src/vista/login/SubPanelLogin1.java</file>
+            <file>file:/C:/Users/luish/Documents/ProFit/src/vista/categorias/FormCategoria.java</file>
+            <file>file:/C:/Users/luish/Documents/ProFit/src/app/Main.java</file>
+            <file>file:/C:/Users/luish/Documents/ProFit/src/vista/dashboard/SubPanelDashboard1.java</file>
+            <file>file:/C:/Users/luish/Documents/ProFit/src/vista/productos/FormProducto.java</file>
+            <file>file:/C:/Users/luish/Documents/ProFit/src/vista/categorias/SubPanelCategorias1.java</file>
+            <file>file:/C:/Users/luish/Documents/ProFit/src/vista/productos/SubPanelProductos1.java</file>
         </group>
     </open-files>
 </project-private>

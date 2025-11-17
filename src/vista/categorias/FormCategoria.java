@@ -88,6 +88,7 @@ public class FormCategoria extends javax.swing.JDialog {
         jPnlGuardarButton.setLayout(new java.awt.GridLayout(1, 1));
 
         jBtnGuardar.addActionListener(e -> guardarCategoria());
+        jBtnGuardar.setText("Guardar");
         jPnlGuardarButton.add(jBtnGuardar);
 
         jPnlMain.add(jPnlGuardarButton);

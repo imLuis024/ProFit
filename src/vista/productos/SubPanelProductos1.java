@@ -124,7 +124,7 @@ public class SubPanelProductos1 extends javax.swing.JPanel {
         jBtnActualizar.addActionListener(e -> cargarProductos());
         jPnlButtons.add(jBtnActualizar);
 
-        jBtnActualizar.setText("Actualizar");
+        jBtnRegresar.setText("Regrsar");
 
         jBtnActualizar.addActionListener(e -> cargarProductos());
         jBtnRegresar.addActionListener(new java.awt.event.ActionListener() {

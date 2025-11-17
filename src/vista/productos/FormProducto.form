@@ -167,7 +167,7 @@
           <SubComponents>
             <Component class="javax.swing.JButton" name="jBtnGuardar">
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jBtnGuardar.addActionListener(e -&gt; guardarProducto());"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jBtnGuardar.addActionListener(e -&gt; guardarProducto());&#xa;jBtnGuardar.setText(&quot;Guardar&quot;);"/>
               </AuxValues>
             </Component>
           </SubComponents>

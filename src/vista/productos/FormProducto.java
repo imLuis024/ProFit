@@ -130,6 +130,7 @@ public class FormProducto extends javax.swing.JDialog {
         jPnlGuardarButton.setLayout(new java.awt.GridLayout(1, 1));
 
         jBtnGuardar.addActionListener(e -> guardarProducto());
+        jBtnGuardar.setText("Guardar");
         jPnlGuardarButton.add(jBtnGuardar);
 
         jPnlMain.add(jPnlGuardarButton);

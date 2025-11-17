@@ -127,7 +127,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnRegresarActionPerformed"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jBtnActualizar.setText(&quot;Actualizar&quot;);&#xa;&#xa;jBtnActualizar.addActionListener(e -&gt; cargarProductos());"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="jBtnRegresar.setText(&quot;Regrsar&quot;);&#xa;&#xa;jBtnActualizar.addActionListener(e -&gt; cargarProductos());"/>
               </AuxValues>
             </Component>
           </SubComponents>
